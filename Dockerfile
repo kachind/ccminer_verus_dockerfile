@@ -9,7 +9,7 @@ ENV THREADS=0
 RUN apt-get -y update
 RUN apt-get -y upgrade
 RUN apt-get -y update
-RUN apt-get -y install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential sudo git
+RUN apt-get -y install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential sudo git wget
 
 RUN adduser --disabled-password --gecos '' docker
 RUN adduser docker sudo
@@ -27,7 +27,7 @@ CMD sudo ./autogen.sh
 CMD sudo ./configure.sh
 CMD sudo ./build.sh
 
-RUN wget https://raw.githubusercontent.com/kachind/verus/master/start.sh
-RUN sudo chmod +x start.sh
+RUN wget https://raw.githubusercontent.com/kachind/verus/master/start_ccminer.sh
+RUN sudo chmod +x start_ccminer.sh
 
 ENTRYPOINT ["sh", "-c", "sudo ./start.sh -h \"$HOST\" -p \"$PORT\" -a \"$ADDRESS\" -w \"$WORKER\" -t \"$THREADS\""]
