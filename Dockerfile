@@ -9,8 +9,7 @@ ENV THREADS=0
 RUN apt-get -y update
 RUN apt-get -y upgrade
 RUN apt-get -y update
-RUN apt-get -y install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential
-RUN apt-get install sudo 
+RUN apt-get -y install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential sudo git
 
 RUN adduser --disabled-password --gecos '' docker
 RUN adduser docker sudo
