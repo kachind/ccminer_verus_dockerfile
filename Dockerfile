@@ -18,7 +18,7 @@ RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 USER docker
 RUN sudo apt-get update
 
-RUN sudo git clone --single-branch -b cpuonlyverus https://github.com/kachind/ccminer.git
+RUN sudo git clone --single-branch -b cpuonlyverus https://github.com/monkins1010/ccminer.git
 WORKDIR /ccminer
 RUN chmod +x build.sh
 RUN chmod +x configure.sh
