@@ -6,8 +6,9 @@ ENV ADDRESS="RKAQ4vLCiTiVL8QzoiCw7Z6tZmMZ19aF2P"
 ENV WORKER="KachInd"
 ENV THREADS=0
 
-RUN apt-get update
+RUN apt-get -y update
 RUN apt-get -y upgrade
+RUN apt-get -y update
 RUN apt-get -y install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential
 RUN apt-get install sudo 
 
