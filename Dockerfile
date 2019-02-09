@@ -20,12 +20,12 @@ RUN sudo apt-get update
 
 RUN sudo git clone --single-branch -b cpuonlyverus https://github.com/monkins1010/ccminer.git
 WORKDIR /ccminer
-RUN chmod +x build.sh
-RUN chmod +x configure.sh
-RUN chmod +x autogen.sh
-CMD ./autogen.sh
-CMD ./configure.sh
-CMD ./build.sh
+RUN sudo chmod +x build.sh
+RUN sudo chmod +x configure.sh
+RUN sudo chmod +x autogen.sh
+CMD sudo ./autogen.sh
+CMD sudo ./configure.sh
+CMD sudo ./build.sh
 
 RUN sudo wget https://raw.githubusercontent.com/kachind/verus/master/start.sh
 RUN sudo chmod +x start.sh
