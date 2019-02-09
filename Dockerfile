@@ -30,4 +30,4 @@ CMD sudo ./build.sh
 RUN wget https://raw.githubusercontent.com/kachind/verus/master/start_ccminer.sh
 RUN sudo chmod +x start_ccminer.sh
 
-ENTRYPOINT ["sh", "-c", "sudo ./start.sh -h \"$HOST\" -p \"$PORT\" -a \"$ADDRESS\" -w \"$WORKER\" -t \"$THREADS\""]
+ENTRYPOINT ["sh", "-c", "sudo ./start_ccminer.sh -h \"$HOST\" -p \"$PORT\" -a \"$ADDRESS\" -w \"$WORKER\" -t \"$THREADS\""]
