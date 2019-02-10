@@ -27,6 +27,7 @@ CMD sudo ./autogen.sh
 CMD sudo ./configure.sh
 CMD sudo ./build.sh
 
+WORKDIR /build
 RUN sudo wget https://raw.githubusercontent.com/kachind/verus/master/start_ccminer.sh
 RUN sudo chmod +x start_ccminer.sh
 
