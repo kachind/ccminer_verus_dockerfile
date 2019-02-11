@@ -20,9 +20,6 @@ RUN sudo git clone --single-branch -b cpuonlyverus https://github.com/monkins101
 WORKDIR ccminer
 RUN sudo chmod +x build.sh && sudo chmod +x configure.sh && sudo chmod +x autogen.sh
 RUN sudo ./autogen.sh && sudo ./configure.sh && sudo ./build.sh
-RUN ls
-WORKDIR build
-RUN ls
 RUN sudo wget https://raw.githubusercontent.com/kachind/verus/master/start_ccminer.sh && sudo chmod +x start_ccminer.sh
 
 ENTRYPOINT ["sh", "-c", "sudo ./start_ccminer.sh -h \"$HOST\" -p \"$PORT\" -a \"$ADDRESS\" -w \"$WORKER\" -t \"$THREADS\""]
