@@ -17,11 +17,11 @@ USER docker
 RUN sudo apt-get update
 
 RUN sudo git clone --single-branch -b cpuonlyverus https://github.com/monkins1010/ccminer.git
-WORKDIR /ccminer
+WORKDIR ccminer
 RUN sudo chmod +x build.sh && sudo chmod +x configure.sh && sudo chmod +x autogen.sh
 RUN sudo ./autogen.sh && sudo ./configure.sh && sudo ./build.sh
 RUN ls
-WORKDIR /ccminer/build
+WORKDIR build
 RUN ls
 RUN sudo wget https://raw.githubusercontent.com/kachind/verus/master/start_ccminer.sh && sudo chmod +x start_ccminer.sh
 
