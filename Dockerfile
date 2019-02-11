@@ -21,7 +21,7 @@ WORKDIR /ccminer
 RUN sudo chmod +x build.sh && sudo chmod +x configure.sh && sudo chmod +x autogen.sh
 RUN sudo ./autogen.sh && sudo ./configure.sh && sudo ./build.sh
 RUN ls
-WORKDIR /build
+WORKDIR /ccminer/ccminer
 RUN ls
 RUN sudo wget https://raw.githubusercontent.com/kachind/verus/master/start_ccminer.sh && sudo chmod +x start_ccminer.sh
 
